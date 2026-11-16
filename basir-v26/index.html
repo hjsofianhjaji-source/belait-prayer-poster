@@ -1,1 +1,267 @@
-BASIR V2.6 - Setup
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#07152b">
+<title>BASIR V2.6 | Premium Visual Edition</title>
+<style>
+:root{color-scheme:dark;--navy:#07152b;--panel:#10213a;--panel2:#152e4b;--line:#304968;--gold:#eec988;--cream:#f7f3e9;--muted:#a7b9d1;--blue:#7aa8d7;--danger:#ffc4c4}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 90% -10%,#1a4666 0%,transparent 42%),#07152b;color:var(--cream);font:15px/1.48 system-ui,-apple-system,"Segoe UI",Arial,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.topbar{border-bottom:1px solid #ffffff18;background:#08192bd9;backdrop-filter:blur(16px);position:sticky;top:0;z-index:8}.topinner{max-width:1360px;margin:auto;min-height:66px;padding:11px 20px;display:flex;align-items:center;justify-content:space-between;gap:10px}.brand{display:flex;align-items:center;gap:10px}.mark{width:37px;height:37px;display:grid;place-items:center;border-radius:13px;background:linear-gradient(130deg,#153452,#284d65);border:1px solid #d7b47b;color:#f6db9e;font-size:25px}.brand-name{font-size:15px;font-weight:820;letter-spacing:.12em}.brand-sub{font-size:11px;color:var(--muted);letter-spacing:.08em}.headtag{border:1px solid #5f7286;border-radius:40px;padding:6px 10px;color:#f0d196;font-size:11px;white-space:nowrap}
+.container{max-width:1360px;margin:auto;padding:27px 20px 80px}.hero{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:end;margin:0 0 20px}.eyebrow{color:var(--gold);text-transform:uppercase;font-size:11px;letter-spacing:.25em;font-weight:800}.hero h1{font-size:clamp(26px,3.5vw,40px);font-weight:760;line-height:1.1;letter-spacing:-.035em;margin:7px 0}.hero p{color:var(--muted);margin:0;max-width:690px}.version{padding:9px 13px;background:#1a304c;border:1px solid #344c6c;border-radius:12px;font-size:12px;color:#d6e7f7}
+.workspace{display:grid;grid-template-columns:minmax(0,1.04fr) minmax(320px,.96fr);gap:23px;align-items:start}.section{border:1px solid #294664;background:linear-gradient(130deg,#122943ee,#0d2038f5);border-radius:19px;overflow:hidden;margin-bottom:14px;box-shadow:0 10px 40px #00000015}.section-head{padding:15px 17px 11px;border-bottom:1px solid #ffffff13;display:flex;gap:10px;align-items:center}.section-head .num{width:29px;height:29px;background:#d6b27621;border:1px solid #d6b27660;color:#f3d39a;display:grid;place-items:center;border-radius:9px;font-size:12px;font-weight:800}.section-title{font-size:16px;font-weight:760}.section-sub{font-size:12px;color:var(--muted)}.section-body{padding:16px 18px 19px}label{font-size:12.5px;font-weight:670;color:#dce9f9;display:block;margin:12px 0 6px}input:not([type=checkbox]):not([type=file]),select,textarea{background:#081c32;border:1px solid #405c7b;border-radius:11px;color:white;width:100%;padding:11px 12px;min-height:45px;outline-offset:2px}input[type=file]{display:block;width:100%;padding:13px;color:#e0ecf7;border-radius:11px;background:#0c233b;border:1px dashed #607f9d;font-size:12px}.cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}.times{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.time label{margin-top:6px}.time input{font-size:14px;text-align:center;padding:9px 4px!important}.hint{font-size:12px;color:#b6c7dc;margin:8px 0}.notice{font-size:12px;color:#cdd9ea;line-height:1.45;background:#1c3552;border-left:3px solid #d6af74;padding:12px 13px;border-radius:0 10px 10px 0;margin:12px 0}.notice.warn{border-color:#f5b4a8}.checks{display:flex;gap:10px;align-items:flex-start;margin:16px 0 10px;color:#f1ecdc;line-height:1.55;font-size:13px}.checks input{flex:none;width:18px;height:18px;accent-color:#d6b877;margin:2px 0}.buttonrow{display:flex;flex-wrap:wrap;gap:9px;margin:13px 0 0}.btn{background:linear-gradient(135deg,#efd79d,#dcb873);color:#15243a;border:1px solid #fff7da66;border-radius:10px;min-height:43px;padding:10px 14px;font-size:13px;font-weight:750;display:inline-flex;align-items:center;justify-content:center;gap:7px}.btn.secondary{color:#e6f0fa;background:#1e4566;border:1px solid #477394}.btn.tertiary{color:#dbc99e;background:#0e2741;border:1px solid #846e50}.btn.full{flex:1}.btn.danger{color:#ffc8c8;background:#562e34;border-color:#ae6974}.btn:disabled{opacity:.55;cursor:not-allowed}.seg{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.seg button{background:#0b2139;color:#a8c1da;border:1px solid #405875;border-radius:10px;padding:10px 5px;min-height:40px;font-size:11px;font-weight:750}.seg button.active{background:#304f63;border-color:#e9c887;color:#fff0c6}.smallcaps{letter-spacing:.13em;text-transform:uppercase;color:var(--muted);font-size:10px;font-weight:800}.kv{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:7px 0 13px}.swatch{width:25px;height:25px;border-radius:50%;border:2px solid #e9ca8b}
+.preview-wrap{position:sticky;top:81px}.preview-panel{background:linear-gradient(160deg,#142e48,#0b1d31);border:1px solid #365573;border-radius:21px;padding:16px 17px 18px;box-shadow:0 24px 58px #0005}.preview-title{display:flex;justify-content:space-between;gap:12px;align-items:center;margin:0 0 12px}.preview-title strong{font-size:15px}.preview-title span{font-size:11px;color:#e8c78c}.poster-frame{max-width:405px;margin:auto;background:#061a30;border-radius:12px;overflow:hidden;border:1px solid #e4c48260;box-shadow:0 16px 45px #0007}.poster-frame canvas{width:100%;height:auto;display:block;aspect-ratio:9/16}.design-indicator{font-size:12px;text-align:center;color:#f5d9a1;background:#244364;border:1px solid #6b7e9d;border-radius:9px;padding:8px;margin:8px 0 0}.preview-caption{color:#b2c6dc;text-align:center;margin:12px 0 3px;font-size:12px}.status{white-space:pre-wrap;font-size:12px;line-height:1.5;padding:11px 12px;background:#203957;border:1px solid #365674;border-radius:10px;margin-top:13px;color:#f3e3be;min-height:43px}.status.bad{background:#55303d;border-color:#95556a;color:#ffe2e2}.preview-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px}.footer{font-size:12px;color:#849db6;text-align:center;margin-top:18px}.hidden{display:none!important}
+#imageOverlay{position:fixed;inset:0;z-index:90;background:#061020f7;overflow:auto;padding:18px;text-align:center}#imageOverlay img{max-width:min(100%,500px);height:auto;margin:17px auto;display:block;box-shadow:0 20px 60px #000b}.controlhint{display:flex;align-items:center;justify-content:space-between;gap:12px}.controlhint .hint{margin:0}.photo-chip{font-size:11px;color:#ffdc9e;border:1px solid #d1ab70;padding:5px 9px;border-radius:14px;white-space:nowrap}.row-flex{display:flex;gap:9px;align-items:center;flex-wrap:wrap}.tag{font-size:10px;color:#ffd59b;border:1px solid #986b4e;background:#55341c;padding:4px 7px;border-radius:5px;letter-spacing:.04em}a{color:#eec988}
+@media(max-width:970px){.workspace{grid-template-columns:minmax(0,1fr) minmax(285px,.85fr)}.times{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:740px){.container{padding:19px 12px 55px}.topinner{padding:10px 12px}.workspace{grid-template-columns:1fr}.preview-wrap{position:static;order:-1}.preview-panel{padding:12px}.poster-frame{max-width:320px}.preview-actions{max-width:480px;margin:auto}.times{grid-template-columns:repeat(4,minmax(0,1fr))}.hero{margin-bottom:16px}.headtag{font-size:10px}.version{display:none}}
+@media(max-width:425px){.times{grid-template-columns:repeat(2,minmax(0,1fr))}.seg{grid-template-columns:1fr 1fr}.brand-name{font-size:14px}.headtag{padding:5px 8px}.cols{gap:8px}.section-body{padding:13px}.poster-frame{max-width:270px}}
+@media(prefers-reduced-motion:no-preference){.btn,.seg button{transition:background-color .2s,border-color .2s,transform .2s}.btn:active{transform:scale(.98)}}
+
+/* V2.6 — softer glass UI, lighter borders, better photo visibility. Poster artwork drawn separately on canvas. */
+:root{--gold:#d9ba82;--cream:#f3f0e9;--muted:#b5c4d2;--line:#314b66}
+body{background:radial-gradient(ellipse at 12% 0%,#153f4b 0,transparent 40%),radial-gradient(ellipse at 100% 40%,#15294c 0,transparent 44%),#071321}
+.topbar{background:#07121df0;border-bottom:1px solid #d9ba8233}.mark{border-radius:12px;background:linear-gradient(145deg,#1f4850,#081828);border-color:#d2b883}
+.hero h1{font-weight:680;letter-spacing:-.045em}.section{background:linear-gradient(125deg,#11283b,#0b1b2b);border:1px solid #a1b8c02b;box-shadow:0 12px 38px #0002}
+.section-head{padding:17px 20px;border-bottom:1px solid #d0dfdb17}.section-title{font-size:16px;letter-spacing:-.025em}.section-body{padding:17px 20px 21px}
+.preview-panel{background:linear-gradient(165deg,#112a3d,#081726);border-color:#e0bc7840;box-shadow:0 28px 70px #0008}.poster-frame{max-width:430px;border-radius:22px;border:1px solid #e4c4823f;box-shadow:0 22px 60px #0008;overflow:hidden}
+.btn{border-radius:12px}.btn.secondary{background:#204a57;border-color:#5b858a}.seg button.active{background:#22515b;border-color:#dbbe84;color:#fff7e7}
+.design-indicator{background:#132d3850;border-color:#6a8d8e55;color:#f7dfb6}
+@media(max-width:425px){.poster-frame{max-width:290px}.preview-panel{padding:12px}.brand-sub{font-size:9px;letter-spacing:.065em}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="topinner"><div class="brand"><div class="mark" aria-hidden="true">✧</div><div><div class="brand-name">BASIR <span style="color:#e9c988">V2.6</span></div><div class="brand-sub">PREMIUM VISUAL EDITION</div></div></div><div class="headtag">STUDIO POSTER • BRUNEI</div></div></header>
+<main class="container">
+<div class="hero"><div><div class="eyebrow">Ruang kreatif peribadi</div><h1>Waktu Sembahyang, <span style="color:#e8c27b">Lebih Indah.</span></h1><p>Jana poster 1080 × 1920 untuk WhatsApp Status. Masukkan waktu daripada jadual rasmi, pilih visual, semak petikan dan simpan sebagai PNG.</p></div><div class="version">Versi baharu · V2.4 kekal berasingan</div></div>
+<div class="workspace">
+<div class="controls">
+<section class="section"><div class="section-head"><div class="num">01</div><div><div class="section-title">Tarikh & waktu rasmi</div><div class="section-sub">Maklumat diisi dan disemak sendiri</div></div></div><div class="section-body">
+<div class="cols"><div><label for="date">Tarikh Masihi</label><input type="date" id="date"></div><div><label for="hijri">Tarikh Hijrah rasmi</label><input id="hijri" placeholder="Contoh: 5 Jamadilakhir 1448H"></div></div>
+<div class="buttonrow"><button class="btn secondary" id="tomorrow" type="button">Pilih esok · Brunei</button></div>
+<div class="notice warn">Waktu <strong>tidak diisi secara automatik</strong>. Sila rujuk jadual rasmi terkini bagi tarikh berkenaan. Semak semua lapan waktu dan tarikh Hijrah sebelum berkongsi.</div>
+<div class="times" id="times"></div>
+<div class="cols"><div><label for="source">Sumber jadual</label><select id="source"><option value="KHEU">KHEU</option><option value="Jabatan Ukur">Jabatan Ukur</option><option value="Lain-lain">Lain-lain</option></select></div><div><label for="checked">Tarikh disemak</label><input type="date" id="checked"></div></div>
+<label for="zoneNote">Nota kawasan (boleh diubah)</label><input id="zoneNote" value="Belait +3 minit · Tutong +1 minit (semak jadual rasmi)"><p class="hint">Nota asal V2.2 dikekalkan sebagai teks rujukan, bukan pelarasan waktu secara automatik.</p>
+</div></section>
+<section class="section"><div class="section-head"><div class="num">02</div><div><div class="section-title">Studio rekaan & fotografi</div><div class="section-sub">10 visual · pemilihan automatik 20 / 20 / 30 / 30</div></div></div><div class="section-body">
+<label for="category">Kategori visual</label><div class="seg" role="group" aria-label="Kategori visual"><button type="button" data-cat="auto" class="active">Auto</button><button type="button" data-cat="nature">Nature</button><button type="button" data-cat="city">World City</button><button type="button" data-cat="islamic">Islamic</button></div><div class="seg" style="margin-top:8px;grid-template-columns:1fr 1fr"><button type="button" data-cat="future">Futuristic / AI</button><button type="button" id="nextDesign">Rekaan seterusnya ↻</button></div>
+<div class="cols"><div><label for="layout">Susun atur</label><select id="layout"><option value="auto">Auto — pelbagai</option><option value="rows">Baris menegak</option><option value="grid">Grid 2 × 4</option><option value="columns">Dua lajur</option></select></div><div><label for="treatment">Rawatan visual</label><select id="treatment"><option value="glass">Royal Glass</option><option value="royal">Royal gold</option><option value="neon">Neon glow</option><option value="minimal">Minimalis</option></select></div></div>
+<div class="kv"><div><div class="smallcaps">Latar pilihan</div><div id="themeLabel" style="font-weight:780;font-size:14px">Islamic · Malam Damai</div></div><span class="photo-chip" id="photoState">Menunggu foto</span></div>
+<label for="photo">Muat naik foto sendiri (Photos / Files)</label><input type="file" id="photo" accept="image/*"><div class="controlhint" style="margin-top:8px"><p class="hint">Foto tidak dihantar ke pelayan. Foto peribadi boleh disimpan setempat pada peranti untuk draf.</p></div><div class="buttonrow"><button class="btn tertiary" id="removePhoto" type="button">Buang foto sendiri</button><button class="btn secondary" id="reloadPhoto" type="button">Cuba semula foto</button></div>
+<div class="notice" id="photoNote">Foto dalam talian memerlukan internet dan kebenaran capaian imej. Jika gagal, poster menggunakan ilustrasi kod yang dilabelkan dengan jelas — bukan gambar sebenar.</div>
+</div></section>
+<section class="section"><div class="section-head"><div class="num">03</div><div><div class="section-title">Petikan al-Quran</div><div class="section-sub">Pilihan, teks dan semakan manusia</div></div></div><div class="section-body">
+<label for="quote">Pilih petikan</label><select id="quote"><option value="none">Tanpa petikan</option><option value="20:114">Taha 20:114 — رَبِّ زِدْنِي عِلْمًا</option><option value="94:6">Al-Insyirah 94:6</option><option value="13:28">Ar-Ra'd 13:28</option></select>
+<div class="notice">Petikan Arab dan terjemahan di sini ialah teks draf untuk semakan. Sila semak dengan mushaf serta sumber terjemahan yang berautoriti sebelum eksport.</div>
+<label class="checks"><input type="checkbox" id="quoteVerified"><span>Saya telah menyemak teks Arab, terjemahan dan rujukan ayat dengan sumber berautoriti.</span></label>
+<label for="translationSource">Sumber terjemahan yang disemak</label><input id="translationSource" placeholder="Contoh: edisi / penerbit / muka surat">
+</div></section>
+<section class="section"><div class="section-head"><div class="num">04</div><div><div class="section-title">Pengesahan & draf</div><div class="section-sub">Keselamatan data dan eksport</div></div></div><div class="section-body">
+<label class="checks"><input id="verified" type="checkbox"><span>Saya telah menyemak tarikh Masihi, Hijrah, semua 8 waktu asas Brunei-Muara dan sumber rasmi.</span></label>
+<div class="notice">Sistem ini alat reka poster, bukan pembekal waktu sembahyang rasmi. Pengesahan adalah tanggungjawab pengguna.</div>
+<div class="buttonrow"><button class="btn secondary full" id="saveDraft" type="button">Simpan draf</button><button class="btn tertiary full" id="importV24" type="button">Import draf V2.4</button><button class="btn tertiary full" id="importV22" type="button">Import draf V2.2</button></div>
+<div class="buttonrow"><button class="btn tertiary" id="clearDraft" type="button">Kosongkan draf V2.6</button></div>
+<p class="hint">Input disimpan automatik di peranti ini. Data V2.2 dan V2.3 tidak diubah atau dipadam. Foto sendiri perlu dipilih semula dalam V2.6 kerana storan foto versi ini berasingan. Pada Safari mod peribadi atau jika storan disekat, fungsi draf mungkin terhad.</p>
+</div></section>
+</div>
+<aside class="preview-wrap"><div class="preview-panel"><div class="preview-title"><strong>Pratonton Langsung</strong><span>1080 × 1920 · 9:16</span></div><div class="poster-frame"><canvas id="poster" width="1080" height="1920" aria-label="Pratonton poster waktu sembahyang"></canvas></div><p class="preview-caption" id="previewCaption">Latar: sedang disediakan</p><div class="preview-actions"><button class="btn" id="save" type="button">Simpan PNG</button><button class="btn secondary" id="openImg" type="button">Buka gambar</button></div><button class="btn tertiary" id="generate" type="button" style="width:100%;margin-top:9px">Jana reka bentuk baharu ↻</button><p class="design-indicator" id="designIndicator" aria-live="polite">Rekaan 1 · Bersedia untuk variasi seterusnya</p><div class="status" id="status" role="status" aria-live="polite">Pratonton sedia. Isi dan sahkan jadual rasmi sebelum eksport.</div><p class="hint" style="margin-bottom:0">iPhone: untuk menyimpan, cuba Simpan PNG; jika perlu gunakan Buka gambar → tekan lama → Save Image.</p></div></aside>
+</div><div class="footer">BASIR V2.6 · Studio peribadi · Tiada muat naik data waktu atau foto sendiri ke pelayan · Bukan jadual rasmi</div></main>
+<script>
+'use strict';
+const $=id=>document.getElementById(id), N=['Imsak','Subuh','Syuruk','Dhuha','Zohor','Asar','Maghrib','Isyak'];
+const Q={
+ '20:114':{a:'وَقُل رَّبِّ زِدْنِي عِلْمًا',m:'Dan katakanlah: Wahai Tuhanku, tambahkanlah ilmuku.',r:'Surah Taha · 20:114 (petikan)'},
+ '94:6':{a:'إِنَّ مَعَ الْعُسْرِ يُسْرًا',m:'Sesungguhnya bersama kesulitan ada kemudahan.',r:'Surah Al-Insyirah · 94:6'},
+ '13:28':{a:'أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ',m:'Ketahuilah, dengan mengingati Allah hati menjadi tenteram.',r:'Surah Ar-Ra‘d · 13:28 (petikan)'}
+};
+// Visual library: 2 nature + 2 city + 3 islamic + 3 future = 20% / 20% / 30% / 30%.
+// All photo URLs are actual Unsplash image URLs, not generated illustration assets.
+// If image cannot load/CORS fails, application shows an explicitly labelled code illustration.
+const THEMES=[
+ {cat:'nature',name:'Kabut & Hutan',colors:['#112f35','#276857','#f4d395'],photo:'photo-1500534623283-312aade485b7',kind:'mountain'},
+ {cat:'nature',name:'Gunung & Langit',colors:['#173c50','#47778c','#f2c98c'],photo:'photo-1464822759023-fed622ff2c3b',kind:'sea'},
+ {cat:'city',name:'City Lights',colors:['#0b2543','#31619a','#f8cf9d'],photo:'photo-1519501025264-65ba15a82390',kind:'city'},
+ {cat:'city',name:'Urban Blue',colors:['#10193b','#565fa7','#e7bde7'],photo:'photo-1480714378408-67cf0d13bc1b',kind:'city'},
+ {cat:'islamic',name:'Malam Damai',colors:['#091e32','#286280','#f4cf8a'],photo:'photo-1574411108886-e58471bfe73a',kind:'arch'},
+ {cat:'islamic',name:'Geometri Cahaya',colors:['#142d2c','#39715a','#f5dfaa'],photo:'photo-1564769625905-50e93615e769',kind:'arch'},
+ {cat:'islamic',name:'Seni Bina Islam',colors:['#30282d','#87705b','#ffe3a5'],photo:'photo-1548013146-72479768bada',kind:'arch'},
+ {cat:'future',name:'Cahaya Kosmik',colors:['#11183f','#3d4e96','#9ceaff'],photo:'photo-1519608487953-e999c86e7455',kind:'future'},
+ {cat:'future',name:'Langit Bintang',colors:['#0d1d41','#574b86','#d1b6ff'],photo:'photo-1519681393784-d120267933ba',kind:'future'},
+ {cat:'future',name:'Future Skyline',colors:['#081b36','#294b82','#7bffeb'],photo:'photo-1486406146926-c627a92ad1ab',kind:'future'}
+];
+const W=1080,H=1920,canvas=$('poster'),ctx=canvas.getContext('2d',{alpha:false}),K='basir_v26_draft_v1',PREVIOUS='basir_v24_draft_v1',OLD='basir_v22_draft';
+let category='auto',variant=0,activePhoto=null,ownPhoto=null,remotePhoto=null,remoteKey='',loadToken=0,lastOverlay=null,photoStatus='pending',persistTimer=null;
+const savedIds=['date','hijri','source','checked','layout','treatment','quote','translationSource','zoneNote','verified','quoteVerified'];
+function fmtBruneiDate(delta=0){const pp=Object.fromEntries(new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Brunei',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date()).map(x=>[x.type,x.value]));return new Date(Date.UTC(+pp.year,+pp.month-1,+pp.day+delta)).toISOString().slice(0,10)}
+function fmtDate(s){if(!/^\d{4}-\d\d-\d\d$/.test(s))return 'TARIKH BELUM DIISI';let [y,m,d]=s.split('-').map(Number),z=new Date(Date.UTC(y,m-1,d));if(z.getUTCFullYear()!==y||z.getUTCMonth()!==m-1||z.getUTCDate()!==d)return 'TARIKH TIDAK SAH';return ['Ahad','Isnin','Selasa','Rabu','Khamis','Jumaat','Sabtu'][z.getUTCDay()]+', '+d+' '+['Januari','Februari','Mac','April','Mei','Jun','Julai','Ogos','September','Oktober','November','Disember'][m-1]+' '+y}
+function validDate(s){return fmtDate(s)!=='TARIKH BELUM DIISI'&&fmtDate(s)!=='TARIKH TIDAK SAH'}
+function validTime(t){return /^([01]\d|2[0-3]):[0-5]\d$/.test(t)}
+function pickTheme(){const start=validDate($('date').value)?Math.round(Date.parse($('date').value+'T00:00:00Z')/86400000):0;const order=[0,4,7,2,5,8,1,6,3,9];const v=order.filter(i=>category==='auto'||THEMES[i].cat===category);return v[((start+variant)%v.length+v.length)%v.length]}
+function hexToRgba(hex,a){let v=hex.replace('#','');return `rgba(${parseInt(v.slice(0,2),16)},${parseInt(v.slice(2,4),16)},${parseInt(v.slice(4,6),16)},${a})`}
+function rounded(x,y,w,h,r,fill,stroke,lw=2){ctx.beginPath();ctx.roundRect(x,y,w,h,r);if(fill){ctx.fillStyle=fill;ctx.fill()}if(stroke){ctx.lineWidth=lw;ctx.strokeStyle=stroke;ctx.stroke()}}
+function lineText(s,x,y,size,color='#fff',weight=700,align='center',font='system-ui,Arial,sans-serif'){ctx.fillStyle=color;ctx.font=`${weight} ${size}px ${font}`;ctx.textBaseline='middle';ctx.textAlign=align;ctx.fillText(String(s),x,y)}
+function fitText(s,x,y,maxWidth,desired,min=20,color='#fff',weight=700,align='center',font='system-ui,Arial,sans-serif'){let sz=desired;while(sz>min){ctx.font=`${weight} ${sz}px ${font}`;if(ctx.measureText(s).width<=maxWidth)break;sz-=2}lineText(s,x,y,sz,color,weight,align,font)}
+function wrapText(s,x,y,maxWidth,lineHeight,size,color,maxLines=3,weight=500,font='system-ui,Arial,sans-serif'){ctx.font=`${weight} ${size}px ${font}`;let out=[],row='';for(const t of s.split(/\s+/)){const n=row?row+' '+t:t;if(row&&ctx.measureText(n).width>maxWidth){out.push(row);row=t}else row=n}if(row)out.push(row);const lines=out.slice(0,maxLines);lines.forEach((p,i)=>fitText(p,x,y+i*lineHeight,maxWidth,size,Math.max(18,size-10),color,weight,'center',font))}
+function drawCover(img){const scale=Math.max(W/img.naturalWidth||W/img.width,H/img.naturalHeight||H/img.height);const w=(img.naturalWidth||img.width)*scale,h=(img.naturalHeight||img.height)*scale;ctx.drawImage(img,(W-w)/2,(H-h)/2,w,h)}
+function rnd(k){const x=Math.sin(k*34.732+78.21)*43758.5453;return x-Math.floor(x)}
+function codeIllustration(t,index){const kind=t.kind,a=t.colors[0],b=t.colors[1];ctx.fillStyle=hexToRgba(t.colors[2],.3);ctx.beginPath();ctx.arc(790,440,145,0,Math.PI*2);ctx.fill();if(kind==='city'){for(let k=0;k<29;k++){const x=k*39,h=220+rnd(k+index)*460;ctx.fillStyle=k%3===0?'#07152ba8':'#132a44ac';ctx.fillRect(x,1010-h,35,h+950);for(let j=0;j<11;j++){ctx.fillStyle='#ffd98b88';if(rnd(k*15+j+index)>.5)ctx.fillRect(x+12,1018-h+j*44,5,11)}}}
+else if(kind==='mountain'||kind==='sea'){for(let j=0;j<7;j++){ctx.beginPath();ctx.moveTo(0,680+j*152);for(let x=0;x<=W;x+=30)ctx.lineTo(x,680+j*152+Math.sin(x/145+j*.7)*85);ctx.lineTo(W,H);ctx.lineTo(0,H);ctx.closePath();ctx.fillStyle=j%2===0?'#062c37b4':'#0d5349aa';ctx.fill()}}
+else if(kind==='arch'){ctx.lineWidth=3;ctx.strokeStyle=hexToRgba(t.colors[2],.33);for(let yy=0;yy<13;yy++)for(let xx=0;xx<8;xx++){ctx.save();ctx.translate(xx*160+(yy%2)*80,yy*165);ctx.rotate(Math.PI/4);ctx.strokeRect(-37,-37,74,74);ctx.restore()}ctx.beginPath();ctx.moveTo(90,1150);ctx.lineTo(90,570);ctx.quadraticCurveTo(540,50,990,570);ctx.lineTo(990,1150);ctx.lineWidth=10;ctx.strokeStyle=hexToRgba(t.colors[2],.4);ctx.stroke()}
+else{for(let i=0;i<130;i++){ctx.fillStyle=hexToRgba(t.colors[2],.2+rnd(i)*.55);ctx.beginPath();ctx.arc(rnd(i+index)*W,rnd(i+390+index)*H,2+rnd(i+99)*5,0,Math.PI*2);ctx.fill()}for(let j=0;j<8;j++){ctx.beginPath();ctx.moveTo(-80,300+j*190);ctx.bezierCurveTo(260,70+j*200,790,520+j*120,1150,230+j*200);ctx.strokeStyle=hexToRgba(t.colors[2],.13);ctx.lineWidth=12;ctx.stroke()}}}
+function background(t,i){let gr=ctx.createLinearGradient(0,0,W,H);gr.addColorStop(0,t.colors[0]);gr.addColorStop(.6,t.colors[1]);gr.addColorStop(1,t.colors[0]);ctx.fillStyle=gr;ctx.fillRect(0,0,W,H);activePhoto=ownPhoto||remotePhoto;
+if(activePhoto){try{drawCover(activePhoto)}catch(e){activePhoto=null;codeIllustration(t,i)}}else codeIllustration(t,i);
+const dark=ctx.createLinearGradient(0,0,0,H);dark.addColorStop(0,'#050f2294');dark.addColorStop(.25,'#07122624');dark.addColorStop(.60,'#0715273d');dark.addColorStop(1,'#040d1eb8');ctx.fillStyle=dark;ctx.fillRect(0,0,W,H)}
+function boxStyle(t){const typ=$('treatment').value;return {bg:typ==='minimal'?'#07162ce7':typ==='royal'?'#231c22d9':typ==='neon'?'#07182de5':'#071b31c9',stroke:typ==='neon'?'#80fff4':typ==='minimal'?'#ffffff35':t.colors[2],edge:typ==='neon'?'#acfff7':t.colors[2],title:typ==='minimal'?'#f3e9d8':t.colors[2]}}
+function v25Theme(s){const x=$('treatment').value;return {
+ type:x, ink:x==='minimal'?'#1d2b33':'#faf7f0', accent:x==='neon'?'#83e3d8':x==='minimal'?'#986d3a':'#dfbf85',
+ font:x==='minimal'?'Georgia,serif':'system-ui,Arial,sans-serif',
+ surface:x==='minimal'?'#fff8eed1':x==='royal'?'#0d1621a6':x==='neon'?'#071b2a96':'#0a1d2d7d',
+ border:x==='minimal'?'#8b6e4955':x==='neon'?'#8ae6e16a':x==='royal'?'#e8ca8d66':'#ffffff24'
+}}
+function v25Plate(x,y,w,h,r,p,mode='normal'){
+ ctx.save();
+ ctx.shadowBlur=mode==='hero'?22:10;
+ ctx.shadowColor='#00000030';
+ rounded(x,y,w,h,r,p.surface,null);
+ ctx.restore();
+ ctx.save();
+ ctx.beginPath();ctx.roundRect(x,y,w,h,r);
+ const gloss=ctx.createLinearGradient(x,y,x,y+h);
+ gloss.addColorStop(0,'rgba(255,255,255,0.18)');
+ gloss.addColorStop(.12,'rgba(255,255,255,0.08)');
+ gloss.addColorStop(.38,'rgba(255,255,255,0.02)');
+ gloss.addColorStop(1,'rgba(0,0,0,0.10)');
+ ctx.fillStyle=gloss;ctx.fill();
+ ctx.restore();
+ if(p.border){rounded(x,y,w,h,r,null,p.border,p.type==='minimal'?1:.9)}
+ if(p.type==='neon'){ctx.save();rounded(x+7,y+7,w-14,h-14,Math.max(8,r-4),null,'#72e2d842',1.1);ctx.restore()}
+}
+function v25Header(p){
+ const minimal=p.type==='minimal';
+ if(minimal){rounded(48,58,984,220,20,'#f8f2e5ed','#ab8d5c',2);lineText('BASIR  /  BRUNEI',540,103,22,'#766044',740);lineText('Waktu Sembahyang',540,170,66,'#172d36',680,'center','Georgia,serif');rounded(434,231,212,3,1,'#b28b52');return}
+ if(p.type==='royal'){rounded(58,65,964,210,28,'#0b1a2be0','#d9b97e',3);rounded(77,83,926,172,18,null,'#d5b88266',1);lineText('✦   WAKTU SEMBAHYANG   ✦',540,147,52,'#fbf5e8',750);lineText('NEGARA BRUNEI DARUSSALAM',540,209,24,'#d9bd87',680);return}
+ if(p.type==='neon'){rounded(60,64,960,210,23,'#051e31d8','#76dadb',2);lineText('W A K T U',540,120,27,'#82efea',750);lineText('SEMBAHYANG',540,184,65,'#ffffff',810);lineText('BRUNEI DARUSSALAM',540,237,19,'#98d9dd',680);return}
+ rounded(58,64,964,205,34,'#142e3ea3','#f2e7ce99',2);lineText('WAKTU SEMBAHYANG',540,141,54,'#fff9ec',780);lineText('NEGARA BRUNEI DARUSSALAM',540,210,22,'#e3d1ab',620)
+}
+function v25Quote(p){
+ const q=Q[$('quote').value],minimal=p.type==='minimal';
+ const x=80,y=301,w=920,h=208;
+ v25Plate(x,y,w,h,minimal?12:23,p);
+ if(!q){lineText('﷽',540,405,82,p.ink,500,'center','"Geeza Pro","Times New Roman",serif');return}
+ ctx.save();ctx.direction='rtl';fitText(q.a,540,368,840,58,36,p.ink,730,'center','"Geeza Pro","Noto Naskh Arabic","Traditional Arabic",serif');ctx.restore();
+ wrapText(q.m,540,426,800,35,26,p.ink,2,440);
+ fitText(q.r,540,487,810,20,16,p.accent,700);
+ if(!$('quoteVerified').checked||!$('translationSource').value.trim()){rounded(325,507,430,28,8,'#8e3d40eb');lineText('PETIKAN BELUM DISAHKAN',540,521,16,'#fff',730)}
+}
+function v25Date(p){v25Plate(86,545,908,125,21,p);fitText(fmtDate($('date').value),540,590,830,39,26,p.ink,760);fitText($('hijri').value.trim()||'Tarikh Hijrah belum diisi',540,635,820,26,20,p.accent,680)}
+function v25TimeCards(p,layout){
+ const a=N.map(n=>({name:n,value:$(n.toLowerCase()).value||'--:--'}));
+ const isMin=p.type==='minimal',isNeon=p.type==='neon',isRoyal=p.type==='royal';
+ if(layout==='rows'){
+  const h=103,g=14,y0=708;
+  a.forEach((v,j)=>{const x=85,y=y0+j*(h+g),w=910;
+   v25Plate(x,y,w,h,isMin?12:22,p);
+   if(isRoyal){ctx.fillStyle='#d1b67a';ctx.fillRect(x+27,y+18,4,h-36)}
+   if(isNeon){rounded(x+25,y+30,7,44,4,'#83e3d8')}
+   if(isMin){lineText(String(j+1).padStart(2,'0'),x+42,y+h/2,21,'#aa8558',670)}
+   fitText(v.name,x+(isMin?91:57),y+52,445,35,26,p.ink,isMin?640:690,'left',p.font);
+   fitText(v.value,x+w-42,y+52,320,55,38,p.ink,760,'right')
+  });return
+ }
+ const h=213,ygap=17,xgap=20,y0=708,cw=439;
+ a.forEach((v,j)=>{const col=layout==='grid'?j%2:Math.floor(j/4),row=layout==='grid'?Math.floor(j/2):j%4,x=91+col*(cw+xgap),y=y0+row*(h+ygap);
+  v25Plate(x,y,cw,h,isMin?12:24,p);
+  if(isRoyal){rounded(x+170,y+22,99,3,2,p.accent)}
+  fitText(v.name,x+cw/2,y+76,380,31,25,isMin?'#795d3a':p.accent,700,'center',p.font);
+  fitText(v.value,x+cw/2,y+151,390,67,43,p.ink,750)
+ });
+}
+function v25Footer(p){
+ v25Plate(85,1677,910,92,19,p);
+ fitText($('zoneNote').value.trim()||'Sila rujuk waktu kawasan masing-masing',540,1723,840,27,19,p.ink,650);
+ const c=p.type==='minimal'?'#f4ebda':'#081827cc';rounded(85,1790,910,101,16,c,p.border,1.5);
+ fitText('Sumber: '+$('source').value+'   •   Semakan: '+($('checked').value||'Belum diisi'),540,1823,840,22,16,p.type==='minimal'?'#564b3b':'#e8d4ab',640);
+ fitText($('verified').checked?'DISAHKAN OLEH PENGGUNA · BUKAN JADUAL RASMI':'DRAF · SEMAK JADUAL RASMI SEBELUM BERKONGSI',540,1864,840,19,15,p.type==='minimal'?'#655a4d':'#d9e4ea',650)
+}
+function render(){
+ const i=pickTheme(),t=THEMES[i],p=v25Theme(),layout=$('layout').value==='auto'?['rows','grid','columns'][(i+variant)%3]:$('layout').value;
+ ctx.clearRect(0,0,W,H);background(t,i);
+ // Editorial lighting and a quiet edge gradient preserve photo visibility.
+ const top=ctx.createLinearGradient(0,0,0,H);top.addColorStop(0,p.type==='minimal'?'#ffffff12':'#05132266');top.addColorStop(.45,'#0815200a');top.addColorStop(1,'#05101a72');ctx.fillStyle=top;ctx.fillRect(0,0,W,H);
+ if(p.type==='minimal'){rounded(27,30,1026,1860,25,null,'#e9d5af42',1.2)}
+ if(p.type==='royal'){rounded(28,32,1024,1850,18,null,'#d2b47b38',1.2);rounded(40,44,1000,1826,18,null,'#d2b47b22',1)}
+ if(p.type==='neon'){ctx.save();ctx.strokeStyle='#68e4d33d';ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(63,32);ctx.lineTo(1015,32);ctx.stroke();ctx.restore()}
+ v25Header(p);v25Quote(p);v25Date(p);v25TimeCards(p,layout);v25Footer(p);
+ if(activePhoto===null){rounded(338,280,404,27,7,'#8a5523e5');lineText('ILUSTRASI KOD · BUKAN FOTO',540,294,15,'#fff4e5',760)}
+ const hasPhoto=!!activePhoto;
+ $('photoState').textContent=ownPhoto?'Foto sendiri':hasPhoto?'Foto sebenar':'Ilustrasi kod';
+ $('themeLabel').textContent=t.cat.charAt(0).toUpperCase()+t.cat.slice(1)+' · '+t.name;
+ $('previewCaption').textContent=(ownPhoto?'Foto peribadi':hasPhoto?'Foto sebenar dalam talian':'Ilustrasi kod')+' · '+t.name+' · '+({glass:'Soft Glass',royal:'Royal Gold',neon:'Future Glow',minimal:'Minimal Editorial'}[p.type]);
+}
+
+function state(){const d={category,variant};for(const id of savedIds)d[id]=$(id).type==='checkbox'?$(id).checked:$(id).value;for(const n of N)d[n.toLowerCase()]=$(n.toLowerCase()).value;return d}
+function saveState(){try{localStorage.setItem(K,JSON.stringify(state()));return true}catch{return false}}
+function loadState(obj){if(!obj||typeof obj!=='object')return;for(const [key,value] of Object.entries(obj)){if(key==='category'&&['auto','nature','city','islamic','future'].includes(value))category=value;else if(key==='variant'&&Number.isFinite(value))variant=value;else if($(key)){if($(key).type==='checkbox')$(key).checked=Boolean(value);else if(typeof value==='string')$(key).value=value}}}
+function restore(){let loaded=false;try{let x=JSON.parse(localStorage.getItem(K)||'null');if(x){loadState(x);loaded=true}}catch{}if(!loaded){try{let prev=JSON.parse(localStorage.getItem(PREVIOUS)||'null');if(prev){loadState(prev);loaded=true;status('Draf V2.4 disalin ke V2.6. Draf lama tidak diubah.');}}catch{}}if(!loaded){try{let old=JSON.parse(localStorage.getItem(OLD)||'null');if(old){loadState(old);status('Draf V2.2 disalin ke V2.6. Asal tidak diubah.');}}catch{}}if(!$('date').value)$('date').value=fmtBruneiDate(1);setCatButtons()}
+function setCatButtons(){document.querySelectorAll('[data-cat]').forEach(el=>{const on=el.dataset.cat===category;el.classList.toggle('active',on);el.setAttribute('aria-pressed',on?'true':'false')})}
+function status(msg,bad=false){$('status').textContent=msg;$('status').classList.toggle('bad',bad)}
+function scheduleRender(){clearTimeout(persistTimer);persistTimer=setTimeout(()=>{saveState();render()},55)}
+function problems(){const p=[];if(!validDate($('date').value))p.push('tarikh Masihi sah');if(!$('hijri').value.trim())p.push('tarikh Hijrah rasmi');if(!validDate($('checked').value))p.push('tarikh semakan');for(const n of N)if(!validTime($(n.toLowerCase()).value))p.push(n+' (HH:MM)');if(!$('verified').checked)p.push('pengesahan jadual rasmi');if($('quote').value!=='none'&&(!$('quoteVerified').checked||!$('translationSource').value.trim()))p.push('pengesahan petikan dan sumber terjemahan');return p}
+function toPNG(){render();return new Promise((yes,no)=>{try{canvas.toBlob(b=>b?yes(b):no(Error('PNG gagal dihasilkan. Cuba buang foto online dan gunakan foto sendiri.')),'image/png')}catch(e){no(e)}})}
+let objectURLs=[];function rememberURL(b){const u=URL.createObjectURL(b);objectURLs.push(u);if(objectURLs.length>4)URL.revokeObjectURL(objectURLs.shift());return u}
+async function previewImage(){const issues=problems();if(issues.length){status('Belum boleh buka gambar. Lengkapkan: '+issues.join(', '),true);return}try{const b=await toPNG(),url=rememberURL(b);if(lastOverlay)lastOverlay.remove();lastOverlay=document.createElement('div');lastOverlay.id='imageOverlay';lastOverlay.setAttribute('role','dialog');lastOverlay.setAttribute('aria-label','Gambar poster');const close=document.createElement('button');close.textContent='Tutup gambar ✕';close.className='btn';close.addEventListener('click',()=>{lastOverlay.remove();lastOverlay=null});const im=document.createElement('img');im.alt='Poster waktu sembahyang';im.src=url;const instr=document.createElement('p');instr.textContent='Tekan lama pada gambar untuk menyimpan di iPhone jika muat turun biasa tidak berjaya.';lastOverlay.append(close,im,instr);document.body.append(lastOverlay)}catch(e){status('Ralat gambar: '+e.message,true)}}
+async function savePNG(){const issues=problems();if(issues.length){status('Eksport disekat untuk mengelakkan jadual/petikan tidak disahkan. Lengkapkan: '+issues.join(', '),true);return}try{const b=await toPNG(),name='BASIR-V2.6-Waktu-Sembahyang-'+$('date').value+'.png',f=new File([b],name,{type:'image/png'});if(navigator.canShare?.({files:[f]})&&navigator.share){try{await navigator.share({files:[f],title:'Poster waktu sembahyang'});status('Lembaran Kongsi dibuka. Sila pastikan gambar disimpan pada peranti.');return}catch(e){if(e.name==='AbortError'){status('Perkongsian dibatalkan.');return}}}const a=document.createElement('a');a.href=rememberURL(b);a.download=name;document.body.append(a);a.click();a.remove();status('Fail PNG disediakan. Jika telefon tidak menyimpan, gunakan “Buka gambar” → tekan lama.')}catch(e){status('Ralat eksport: '+e.message,true)}}
+// IndexedDB persists a photo selected from Files/Photos locally, without remote upload.
+function db(){return new Promise((res,rej)=>{if(!('indexedDB' in window))return rej(Error('IndexedDB tidak tersedia'));const r=indexedDB.open('basir-v25-photos',1);r.onupgradeneeded=()=>{if(!r.result.objectStoreNames.contains('images'))r.result.createObjectStore('images')};r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error)})}
+async function photoDB(action,data){let d=await db();return new Promise((res,rej)=>{const tr=d.transaction('images',action==='get'?'readonly':'readwrite'),st=tr.objectStore('images');let r=action==='get'?st.get('myPhoto'):action==='delete'?st.delete('myPhoto'):st.put(data,'myPhoto');r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error);tr.oncomplete=()=>d.close();tr.onerror=()=>d.close()})}
+async function usePhotoBlob(blob,persist=false){const u=URL.createObjectURL(blob),im=new Image();try{await new Promise((res,rej)=>{im.onload=res;im.onerror=()=>rej(Error('Foto tidak dapat dibaca'));im.src=u});ownPhoto=im;remotePhoto=null;render();status('Foto peribadi digunakan. Ia tidak dihantar ke mana-mana pelayan.');if(persist){try{await photoDB('put',blob);status('Foto peribadi digunakan dan disimpan setempat untuk draf.')}catch{status('Foto digunakan, tetapi storan peranti menyekat penyimpanan foto untuk draf.')}}}finally{URL.revokeObjectURL(u)}}
+function photoURL(t){return `https://images.unsplash.com/${t.photo}?auto=format&fit=crop&w=1200&q=82`}
+function loadRemote(force=false){if(ownPhoto&&!force){render();return}const i=pickTheme(),t=THEMES[i],key=t.photo;if(!force&&remoteKey===key&&remotePhoto){render();return}remoteKey=key;remotePhoto=null;const thisToken=++loadToken;render();status('Mencuba memuatkan foto sebenar bagi tema '+t.name+' …');const img=new Image();img.crossOrigin='anonymous';img.referrerPolicy='no-referrer';let stage='local';const timer=setTimeout(()=>{if(thisToken===loadToken){img.onload=img.onerror=null;remotePhoto=null;photoStatus='fallback';render();status('Foto tidak tersedia. Pratonton menggunakan ilustrasi kod. Muat naik foto sendiri untuk gambar sebenar.')}},12000);
+img.onload=()=>{clearTimeout(timer);if(thisToken!==loadToken)return;remotePhoto=img;photoStatus=stage;render();status('Foto sebenar '+(stage==='local'?'daripada folder aset':'daripada Unsplash')+' dimuatkan untuk '+t.name+'. Semak jadual rasmi sebelum simpan.')};
+img.onerror=()=>{if(thisToken!==loadToken)return;if(stage==='local'){stage='online';img.src=photoURL(t);return}clearTimeout(timer);remotePhoto=null;photoStatus='fallback';render();status('Foto tidak dapat dimuatkan dari aset atau Unsplash. Muat naik foto sendiri daripada Photos/Files atau cuba semula.')};
+img.src='assets/scene-'+String(i+1).padStart(2,'0')+'.jpg'}
+function refreshTheme(){saveState();setCatButtons();if(ownPhoto){render();return}loadRemote()}
+for(const n of N){const x=document.createElement('div');x.className='time';const l=document.createElement('label');l.setAttribute('for',n.toLowerCase());l.textContent=n;const inp=document.createElement('input');inp.id=n.toLowerCase();inp.placeholder='HH:MM';inp.inputMode='numeric';inp.maxLength=5;inp.autocomplete='off';inp.addEventListener('blur',()=>{let s=inp.value.trim().replace(/\s/g,'');if(/^\d{3,4}$/.test(s)){s=s.padStart(4,'0');inp.value=s.slice(0,2)+':'+s.slice(2)}scheduleRender()});inp.addEventListener('input',scheduleRender);x.append(l,inp);$('times').append(x)}
+restore();render();$('designIndicator').textContent='Tekan Jana reka bentuk baharu — 12 kombinasi, 4 identiti visual';
+for(const id of savedIds){$(id).addEventListener('input',()=>{scheduleRender();if(id==='date'&&!ownPhoto)loadRemote()});if($(id).type==='checkbox')$(id).addEventListener('change',scheduleRender)}
+document.querySelectorAll('[data-cat]').forEach(b=>b.addEventListener('click',()=>{category=b.dataset.cat;variant=0;refreshTheme()}));
+$('tomorrow').onclick=()=>{$('date').value=fmtBruneiDate(1);refreshTheme()};
+// V2.6: deliberate, visible new design even when a personal photo is selected.
+// Preserve all prayer times, dates, verse, approvals, and the selected photo.
+function generateNewDesign(){
+ // A deterministic combination of genuinely different layouts and treatments.
+ // Every tap advances to another combination even with a personal photo.
+ const layouts=['rows','grid','columns'];
+ const treatments=['glass','royal','neon','minimal'];
+ const resolvedLayout=$('layout').value==='auto'?layouts[(pickTheme()+variant)%3]:$('layout').value;
+ const li=Math.max(0,layouts.indexOf(resolvedLayout));
+ const ti=Math.max(0,treatments.indexOf($('treatment').value));
+ // Cycle all 12 combinations; no two consecutive designs look alike.
+ let next=(ti*3+li+1)%12;
+ $('layout').value=layouts[next%3];
+ $('treatment').value=treatments[Math.floor(next/3)];
+ variant=(variant+1)%100000;
+ saveState();setCatButtons();
+ render();
+ if(!ownPhoto)loadRemote();
+ const layoutNames={rows:'Baris menegak',grid:'Grid kad 2 × 4',columns:'Dua lajur'};
+ const treatmentNames={glass:'Frosted Glass',royal:'Royal Gold',neon:'Future Glow',minimal:'Minimalis'};
+ const summary=layoutNames[$('layout').value]+' · '+treatmentNames[$('treatment').value];
+ $('designIndicator').textContent='Rekaan '+(next+1)+'/12 · '+summary;
+ status('Visual baharu berjaya: '+summary+(ownPhoto?' · Foto sendiri dikekalkan.':' · Memuatkan latar tema.'));
+}
+$('generate').onclick=generateNewDesign;
+$('nextDesign').onclick=generateNewDesign;
+$('reloadPhoto').onclick=()=>{if(ownPhoto){status('Foto sendiri sedang digunakan. Klik “Buang foto sendiri” dahulu untuk melihat foto online.');return}loadRemote(true)};
+$('photo').addEventListener('change',async e=>{const f=e.target.files&&e.target.files[0];if(!f)return;if(!f.type.startsWith('image/'))return status('Fail dipilih bukan gambar.',true);if(f.size>20*1024*1024)return status('Saiz foto terlalu besar. Pilih foto bawah 20 MB.',true);try{await usePhotoBlob(f,true)}catch(err){status('Foto gagal: '+err.message,true)}});
+$('removePhoto').onclick=async()=>{ownPhoto=null;$('photo').value='';try{await photoDB('delete')}catch{}status('Foto sendiri dibuang. Menyediakan foto tema...');loadRemote(true)};
+$('saveDraft').onclick=async()=>{const ok=saveState();status(ok?'Draf V2.6 tersimpan setempat pada peranti ini.':'Draf tidak dapat disimpan kerana storan peranti disekat.',!ok)};
+$('importV24').onclick=()=>{try{const o=JSON.parse(localStorage.getItem(PREVIOUS)||'null');if(!o){status('Draf V2.4 tidak dijumpai dalam peranti/pelayar ini. Anda boleh isi secara manual.',true);return}if(!confirm('Salin nilai draf V2.4 ke V2.6? Nilai V2.6 semasa akan diganti, tetapi V2.4 kekal.'))return;loadState(o);$('verified').checked=false;$('quoteVerified').checked=false;refreshTheme();status('Draf V2.4 disalin. Sila semak semula waktu serta ayat dan sumber.')}catch{status('Draf V2.4 gagal dibaca.',true)}};
+$('importV22').onclick=()=>{try{const o=JSON.parse(localStorage.getItem(OLD)||'null');if(!o){status('Draf V2.2 tidak dijumpai dalam browser/peranti ini. Fail asal V2.2 tidak terjejas.',true);return}if(!confirm('Import nilai draf V2.2 ke V2.6? Draf V2.6 semasa akan diganti (V2.2 kekal).'))return;loadState(o);$('verified').checked=false;$('quoteVerified').checked=false;refreshTheme();status('Draf V2.2 diimport ke V2.6. Sila sahkan semula semua waktu dan petikan.')}catch{status('Draf V2.2 tidak dapat dibaca.',true)}};
+$('clearDraft').onclick=async()=>{if(!confirm('Kosongkan draf V2.6 pada peranti ini? Draf dan fail V2.2 dan V2.3 tidak disentuh.'))return;try{localStorage.removeItem(K)}catch{}try{await photoDB('delete')}catch{}ownPhoto=null;category='auto';variant=0;for(const id of savedIds){const e=$(id);if(e.type==='checkbox')e.checked=false;else if(id==='source')e.value='KHEU';else if(id==='layout')e.value='auto';else if(id==='treatment')e.value='glass';else if(id==='quote')e.value='none';else if(id==='zoneNote')e.value='Belait +3 minit · Tutong +1 minit (semak jadual rasmi)';else e.value=''}for(const n of N)$(n.toLowerCase()).value='';$('date').value=fmtBruneiDate(1);refreshTheme();status('Draf V2.6 dikosongkan. V2.2 tidak diubah.')};
+$('save').onclick=savePNG;$('openImg').onclick=previewImage;
+(async()=>{try{const saved=await photoDB('get');if(saved&&saved instanceof Blob){await usePhotoBlob(saved,false);status('Foto draf terdahulu dipulihkan daripada storan peranti.');return}}catch{}loadRemote()})();
+</script>
+</body>
+</html>
